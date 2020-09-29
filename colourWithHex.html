@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+       <title></title>
+    <style >
+            body{
+                background-color: blue;
+            }
+            #jj{
+              padding:0px;
+              width:200px;
+              border:2px solid black;
+              border-radius:27px;
+                           }
+
+            #hh{
+               border:1px solid black;
+               height:650px;
+               margin:0px;
+               background-color:blue
+            }
+
+            p{
+              font-family:sans-serif;
+              font-size:large;
+            }
+            #kk{
+                position:fixed;
+              top:43%;
+              right:43%;
+              
+            }
+    </style>
+
+    <script type="text/javascript">
+      var y='#0000ff'
+
+
+      function func(){
+          var x=document.getElementById('jj');
+        x.style.backgroundColor='white'
+        x.style.borderColor='white'
+        x.style.color=y
+        x.style.boxShadow='3px 5px 10px 2px rgb(90, 90, 90)'
+      }
+
+      function fun() {
+        var x=document.getElementById('jj');
+        x.style.backgroundColor='transparent'
+          x.style.borderColor='black'
+          x.style.color='black'
+          x.style.boxShadow='none'
+      }
+
+      function funct() {
+        var arr=['#'];
+        for (var i = 0; i <6; i++) {
+      arr.push((Math.floor(Math.random()*16)).toString(16));
+    }
+       y=arr.join('');
+           document.body.style.backgroundColor=y
+           document.getElementById('pa').innerHTML='HEX CODE: ' + y;
+
+      }
+
+    </script>
+  </head>
+<body id="ii">
+     <div id="kk">
+         <p  align='center' id="pa">HEX CODE: #0000ff</p>
+    <div id="jj" onmouseover="func()" onmouseout="fun()" onclick="funct()">
+      <p align='center'>CLICK ME</p>
+      </div>
+    </div>
+  </body>
+</html>

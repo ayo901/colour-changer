@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body{
+        background-color:#2872c7;
+        font-family:sans-serif;
+      }
+      div{
+        position:relative;
+        top:140px;
+        left:500px;
+        width:25%;
+        background-color:#ffffff;
+        text-align:center;
+        height:300px;
+      }
+    #gh{
+      padding:2px;
+        height:30px;
+        width:70%;
+        border-radius:17px;
+        border:1px solid #7d8c75;
+    }
+    button{
+      width:40%;
+      height:40px;
+      border-radius:18px;
+      padding:2px;
+      background-color:#2872c7;
+      border:1px solid #2872c7;
+      font-weight:bold;
+      color:white;
+
+    }
+
+
+    </style>
+    <script type="text/javascript">
+      function func() {
+var x=document.getElementById('mes');
+if (document.getElementById('gh').value!='') {
+  x.appendChild(document.createTextNode('Last message dilivered!!'))
+  document.getElementById('gh').value=''
+}
+      }
+
+      function ayo() {
+        document.getElementById('mes').innerHTML=''
+      }
+    </script>
+  </head>
+  <body>
+    <div >
+        <br>
+        <label for="text">A message you would like to pass</label>
+        <br><br>
+        <textarea name="text" placeholder="e.g: Hi Ayo!" id="gh" rows="1" onchange="ayo()"></textarea>
+        <br><br>
+        <p id="mes"></p>
+        <br><br><br>
+        <button onclick="func()">SUBMIT</button>
+    </div>
+  </body>
+</html>

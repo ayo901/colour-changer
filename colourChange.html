@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+       <title></title>
+    <style >
+            #jj{
+              align:center;
+              padding:0px;
+              width:200px;
+              border:2px solid black;
+              border-radius:27px;
+              position:fixed;
+              top:43%;
+              right:43%;
+                           }
+
+            #hh{
+               border:1px solid black;
+               height:650px;
+               margin:0px;
+               background-color:blue
+            }
+
+            p{
+              font-family:sans-serif;
+              font-size:large;
+            }
+    </style>
+
+    <script type="text/javascript">
+      var y='#0000ff'
+
+
+      function func(){
+          var x=document.getElementById('jj');
+        x.style.backgroundColor='white'
+        x.style.borderColor='white'
+        x.style.color=y
+      }
+
+      function fun() {
+        var x=document.getElementById('jj');
+        x.style.backgroundColor='transparent'
+          x.style.borderColor='black'
+          x.style.color='black'
+      }
+
+      function funct() {
+        var arr=['#'];
+        for (var i = 0; i <6; i++) {
+      arr.push((Math.floor(Math.random()*16)).toString(16));
+    }
+       y=arr.join('');
+           document.getElementById("hh").style.backgroundColor=y
+      }
+
+    </script>
+  </head>
+<body id="ii">
+  <div id="hh">
+    <div id="jj" onmouseover="func()" onmouseout="fun()" onclick="funct()">
+      <p align='center'>CLICK ME</p>
+      </div>
+      </div>
+  </body>
+</html>
